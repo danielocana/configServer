@@ -4,9 +4,15 @@ spring:
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/danielocanaheredia/spring-cloud-config-files
           search-paths:
             - 'station*'
-          #username: username
-          #password: pass
+security:
+  basic:
+    enabled: true
+  user:
+    name: root
+    password: root
